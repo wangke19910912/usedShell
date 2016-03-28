@@ -1,0 +1,14 @@
+#!/bin/bash
+HBASE_HOME=/Users/wangke/work/software/hbase/hbase-1.0.2
+
+if [[ $# == "2" ]];then
+   command="get '$1','$2'"
+elif [[ $# == "3" ]];then
+   command="get '$1','$2',$3"
+else
+   echo "param is not correct!"
+fi
+
+output=`echo "${command}" | $HBASE_HOME/bin/hbase shell`
+echo $output
+

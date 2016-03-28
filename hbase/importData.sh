@@ -8,7 +8,7 @@ TABLE_COLUMN=f1:a
 cat $FILE_RECORD | while read rowkey 
 do
   #GET操作,每次读取一列数据
-  command="get '$TABLE_NAME','$rowkey',{COLUMNS=>'${TABLE_COLUMN}'"
+  command="get '$TABLE_NAME','$rowkey',{COLUMNS=>'${TABLE_COLUMN}}'"
   echo $command
   output=`echo "${command}" | $HBASE_HOME/bin/hbase shell`
   
