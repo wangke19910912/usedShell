@@ -1,6 +1,6 @@
 #!/bin/sh
 source /home/wangke/.zshrc
-kinit h_miui_ad@XIAOMI.HADOOP -k -t /home/wangke/soft/kerberos/h_miui_ad.keytab
+kinit h_.HADOOP -k -t /home/wangke/soft/kerberos/h__ad.keytab
 path=/home/wangke/script
 
 days=$1
@@ -9,7 +9,7 @@ let days+=1
 yesterday=`date -d "$days days ago" +%Y%m%d`
 
 prefix=_CPC_behavior
-high_outputfiles=/user/h_miui_ad/algo/wangke/browser_high_dimension_feature/date=${today}${prefix}
+high_outputfiles=/user/h_ad/algo/wangke/browser_high_dimension_feature/date=${today}${prefix}
 hadoop_model_path=ad_prediction_service_corpus/models
 hadoop_model_name=model_4^1^300
 local_model_path=$path/online

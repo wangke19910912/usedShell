@@ -2,7 +2,7 @@
 
 mail_robot()
 {
-    receivers="wangke3@xiaomi.com"
+    receivers="wangke3@qq.com"
     echo ${2} | mail -s  ${1} ${receivers}
 }
 
@@ -21,12 +21,12 @@ info()
 day=`date -d "$1 days ago" +%Y%m%d`
 print $day
 flight="_new"
-feature_data_path_cluster_cpc=/user/h_miui_ad/yanming/temp/daily_feature/date=${day}_CPC${flight}
-#feature_data_path_cluster_cpd=/user/h_miui_ad/yanming/temp/daily_feature/date=${day}_CPD${flight}
+feature_data_path_cluster_cpc=/user/h_ad/yanming/temp/daily_feature/date=${day}_CPC${flight}
+#feature_data_path_cluster_cpd=/user/had/yanming/temp/daily_feature/date=${day}_CPD${flight}
 feature_data_path_local_cpc='./data_CPC_'${day}
 
-#hdfs_base_folder="/user/h_miui_ad/stream_ctr_prediction"
-hdfs_base_folder="/user/h_miui_ad/ad_prediction_service_corpus/models"
+#hdfs_base_folder="/user/h_ad/stream_ctr_prediction"
+hdfs_base_folder="/user/h_ad/ad_prediction_service_corpus/models"
 online_model_cpc="model_combined_cpc"${flight}
 online_model_cpd="model_combined_cpd"${flight}
 

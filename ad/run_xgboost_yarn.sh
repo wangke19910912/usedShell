@@ -5,9 +5,9 @@
 #git pull
 #mvn clean package -U
 #set
-#queue="miui_recommendation"
+#queue="a_recommendation"
 queue="root.default"
-#queue="root.service.miui_group.miui_ad"
+#queue="root.service.a_group.a_ad"
 num_executor="1"
 #master="yarn-client"
 master="local[*]"
@@ -24,10 +24,10 @@ export PYSPARK_PYTHON=/opt/soft/anaconda2/bin/python
 day=`date -d "4 days ago" +%Y%m%d`
 echo $day
 #output path
-#trainData=/user/h_miui_ad/wangke/daily_feature/date=${day}_CPC_client
-#trainData=/user/h_miui_ad/wangke/index_data/Test2.data
-trainData=/user/h_miui_ad/wangke/daily_feature/date=20170413/part-00999
-modelPath=/user/h_miui_ad/wangke/model
+#trainData=/user/h_a_ad/wangke/daily_feature/date=${day}_CPC_client
+#trainData=/user/h_a_ad/wangke/index_data/Test2.data
+trainData=/user/h_a_ad/wangke/daily_feature/date=20170413/part-00999
+modelPath=/user/h_a_ad/wangke/model
 
 hadoop --cluster c3prc-hadoop fs -rmr ${modelPath}*
 
